@@ -1,36 +1,35 @@
 package activities;
 
 import java.util.HashSet;
-import java.util.Set;
 
 public class Activity10 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-     Set<String> hs=new HashSet<String>();
-     hs.add("test1");
-     hs.add("test2");
-     hs.add("test3");
-     hs.add("test4");
-     hs.add("test5");
-     hs.add("test6");
-     System.out.println("The initial set is :");
-     for(String s:hs)
-     {
-    	 System.out.println(s);
-     }
-     
-     System.out.println("the size of the hashset is "+hs.size());
-     System.out.println("Removing test2 from the set :"+hs.remove("test2"));
-     hs.remove("test7");
-     System.out.println("The element is present/not :"+hs.contains("test5"));
-     System.out.println("The final set is :");
-     for(String s:hs)
-     {
-    	 System.out.println(s);
-     }
-     
-     
-	}
-
+    public static void main(String[] args) {
+        HashSet<String> hs = new HashSet<String>();
+        // Adding element to HashSet
+        hs.add("M");
+        hs.add("B");
+        hs.add("C");
+        hs.add("A");
+        hs.add("M");
+        hs.add("X");
+        
+        //Print HashSet
+        System.out.println("Original HashSet: " + hs);        
+        //Print size of HashSet
+        System.out.println("Size of HashSet: " + hs.size());
+        
+        //Remove element
+        System.out.println("Removing A from HashSet: " + hs.remove("A"));
+        //Remove element that is not present
+        if(hs.remove("Z")) {
+        	System.out.println("Z removed from the Set");
+        } else {
+        	System.out.println("Z is not present in the Set");
+        }
+        
+        //Search for element
+        System.out.println("Checking if M is present: " + hs.contains("M"));
+        //Print updated HashSet
+        System.out.println("Updated HashSet: " + hs);
+    }
 }
